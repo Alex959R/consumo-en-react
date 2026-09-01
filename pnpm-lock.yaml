@@ -17,6 +17,12 @@ importers:
       react-router-dom:
         specifier: ^7.18.3
         version: 7.18.3(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      sweetalert2:
+        specifier: ^11.26.25
+        version: 11.26.25
+      sweetalert2-react-content:
+        specifier: ^5.1.2
+        version: 5.1.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(sweetalert2@11.26.25)
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -749,6 +755,16 @@ packages:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
 
+  sweetalert2-react-content@5.1.2:
+    resolution: {integrity: sha512-7s4JSqqw2OOSKxX+NjVkHwNmN2fGliulJYwjDYlYZ/yc9Gfslxd2XlYFFveEp7pXHVXpQHOAth+vnIKDpHAJNA==}
+    peerDependencies:
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+      sweetalert2: ^11.0.0
+
+  sweetalert2@11.26.25:
+    resolution: {integrity: sha512-+hunCOJdJ6FLj04T9YSLvvZXRjsvIkTeTKP2e4VF8CaBias961BTnWiSFAy7F/CM5eq3QK2Rraoc5Gzftslvkg==}
+
   tinyglobby@0.2.17:
     resolution: {integrity: sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==}
     engines: {node: '>=12.0.0'}
@@ -1444,6 +1460,14 @@ snapshots:
   shebang-regex@3.0.0: {}
 
   source-map-js@1.2.1: {}
+
+  sweetalert2-react-content@5.1.2(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(sweetalert2@11.26.25):
+    dependencies:
+      react: 19.2.8
+      react-dom: 19.2.8(react@19.2.8)
+      sweetalert2: 11.26.25
+
+  sweetalert2@11.26.25: {}
 
   tinyglobby@0.2.17:
     dependencies:

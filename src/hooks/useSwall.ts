@@ -3,7 +3,6 @@ import MySwal from '../lib/swal';
 
 export const useSwal = () => {
     
-    // Confirmación para eliminar
     const confirmDelete = useCallback(async (nombre: string, apellido: string) => {
         const result = await MySwal.fire({
             title: '¿Estás seguro?',
@@ -18,11 +17,9 @@ export const useSwal = () => {
             confirmButtonText: 'Sí, eliminar',
             cancelButtonText: 'Cancelar',
         });
-        
         return result.isConfirmed;
     }, []);
 
-    // Mostrar mensaje de éxito
     const showSuccess = useCallback((message: string) => {
         MySwal.fire({
             icon: 'success',
@@ -33,7 +30,6 @@ export const useSwal = () => {
         });
     }, []);
 
-    // Mostrar mensaje de error
     const showError = useCallback((message: string) => {
         MySwal.fire({
             icon: 'error',
@@ -43,35 +39,17 @@ export const useSwal = () => {
         });
     }, []);
 
-    // Mostrar loading
     const showLoading = useCallback((title = 'Procesando...') => {
         MySwal.fire({
             title: title,
-            didOpen: () => {
-                MySwal.showLoading();
-            },
+            didOpen: () => MySwal.showLoading(),
             allowOutsideClick: false,
             showConfirmButton: false,
         });
     }, []);
 
-    // Cerrar modal
     const close = useCallback(() => {
         MySwal.close();
-    }, []);
-
-    // Mostrar éxito con redirección
-    const showSuccessWithRedirect = useCallback((message: string, redirect: () => void) => {
-        MySwal.fire({
-            icon: 'success',
-            title: '¡Éxito!',
-            text: message,
-            timer: 1500,
-            showConfirmButton: false,
-            didClose: () => {
-                if (redirect) redirect();
-            }
-        });
     }, []);
 
     return {
@@ -79,7 +57,6 @@ export const useSwal = () => {
         showSuccess,
         showError,
         showLoading,
-        close,
-        showSuccessWithRedirect
+        close
     };
 };

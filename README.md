@@ -1,16 +1,22 @@
-# React + Vite
+# Gestión de Deportistas — Consumo de API en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación en **React** que consume una API REST de **Supabase** para listar, crear, actualizar y eliminar deportistas.
 
-Currently, two official plugins are available:
+## Funcionalidades
+- CRUD completo con `fetch` (GET, POST, PATCH, DELETE).
+- Navegación entre pantallas con **React Router**.
+- Componentes separados por acción: listar, crear y actualizar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologías
+React 19 · React Router · Vite · Supabase (API REST) · ESLint
 
-## React Compiler
+## Cómo ejecutarlo
+```bash
+git clone https://github.com/Alex959R/consumo-en-react.git
+cd consumo-en-react
+pnpm install     # o npm install
+pnpm dev         # o npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Autor
+Jhon Alex Rosero Gallego — Aprendiz SENA, Tecnólogo en Análisis y Desarrollo de Software.
